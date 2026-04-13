@@ -5,6 +5,7 @@ resource "google_container_cluster" "primary" {
 
   # Usuwamy domyślny node pool i tworzymy własny
   remove_default_node_pool = true
+  deletion_protection      = false
   initial_node_count       = 1
 
   network    = "default"
